@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display+SC:ital,wght@1,700&family=Poppins:ital,wght@0,400;0,500;1,800&display=swap');
+
+$black: #2e2e2e;
+$white: #fefefe;
+$purple: #f4c2ff;
+
+* {
+  color: $black;
+  font-family: 'Open Sans';
+}
+html, body {
+  background-color: $purple;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins';
+  font-weight: 500;
+  margin: 0;
+}
+b > i {
+  font-family: 'Playfair Display SC';
+  font-weight: 800;
+}
