@@ -1,5 +1,5 @@
 <template>
-  <div id="#profile">
+  <div id="profile">
     <div class="profile--header">
       <h1>Hi. I'm Mayumi.</h1>
       <h2>I'm a web developer and designer based anywhere.</h2>
@@ -40,27 +40,36 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/main.scss';
+
+#profile {
+  margin: 80px 0 0;
+}
+
 .profile--header {
   color: #3F3B40;
   margin: 50px 0 0 120px;
+
   h1 {
     font-size: 48px;
     line-height: 58px;
     margin: 0 0 5px;
     font-weight: 600;
   }
+
   h2 {
     font-size: 36px;
     line-height: 43px;
     width: 630px;
     margin: 0 0 20px;
   }
+
   h3 {
     color: #765483;
     font-size: 18px;
     line-height: 22px;
   }
 }
+
 .profile--description {
   display: flex;
   flex-direction: row;
@@ -82,11 +91,13 @@ export default {
       flex: 1 1 0;
       max-width: 420px;
     }
+
     .text--image {
       flex: 1 1 0;
+
       .image--artwork {
         position: absolute;
-        top: 40px;
+        top: 30px;
         right: 0;
         height: 878px;
       }
