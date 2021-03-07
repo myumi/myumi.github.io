@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display+SC:ital,wght@1,700&family=Poppins:ital,wght@0,400;0,500;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 
 $black: #2e2e2e;
 $white: #fefefe;
@@ -6,20 +6,17 @@ $purple: #f4c2ff;
 
 * {
   color: $black;
-  font-family: 'Open Sans';
+  font-family: 'Fira Sans';
 }
 html, body {
-  background-color: $purple;
+  background: linear-gradient(174.32deg, #F0C2F4 0.26%, #CEC8FF 94.8%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100%;
   margin: 0;
   width: 100%;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Poppins';
   font-weight: 500;
   margin: 0;
-}
-b > i {
-  font-family: 'Playfair Display SC';
-  font-weight: 800;
 }

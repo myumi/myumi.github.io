@@ -22,8 +22,10 @@ export default {
   justify-content: flex-end;
 
   a {
-    font-family: 'Poppins';
-    font-weight: 700;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
     margin: 10px 20px;
     text-decoration: none;
     transition: color 1.5s ease;
