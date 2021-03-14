@@ -1,14 +1,20 @@
 <template>
   <div id="connect">
-    <a href="https://github.com/myumi">
-      <IconGitHub />
-    </a>
-    <a href="https://linkedin.com/myumi">
-      <IconLinkedIn />
-    </a>
-    <a href="mailto:myumiak@gmail.com">
-      <IconGmail />
-    </a>
+    <div class="connect--icon">
+      <a href="https://github.com/myumi">
+        <IconGitHub class="icon" />
+      </a>
+    </div>
+    <div class="connect--icon">
+      <a href="https://linkedin.com/myumi">
+        <IconLinkedIn class="icon" />
+      </a>
+    </div>
+    <div class="connect--icon">
+      <a href="mailto:myumiak@gmail.com">
+        <IconGmail class="icon" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -28,13 +34,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../sass/main.scss';
+
   #connect {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 210px;
 
-    padding: 100px 0;
-    margin: 0 60px;
-    width: 50px;
+    .connect--icon {
+      background: $periwinkle;
+      border-radius: 100%;
+      box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.05), 
+          3px 3px 15px 2px rgba(0, 0, 0, 0.04), 
+          1px 1px 8px 1px rgba(0, 0, 0, 0.02);
+      height: 30px;
+      padding: 10px;
+      width: 30px;
+    }
   }
 </style>

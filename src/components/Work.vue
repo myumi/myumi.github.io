@@ -5,31 +5,68 @@
       <h2>These are some projects I've left my mark on.</h2>
     </div>
     <div class="work--circle"></div>
+    <div class="work--projects">
+      <Project 
+        v-for="{ name, description, list, image } in projects"
+        :name="name"
+        :description="description"
+        :list="list"
+        :image="image"
+        :key="name"
+      />
+    </div>
   </div>
 </template>
 
 <script>
+import Project from './Project'
+
 export default {
+  components: { Project },
   data() {
     return {
       projects: [
         {
-          name: 'AC Patterns',
-          subheader: '',
-          description: '',
-          image: '',
+          name: 'acpatterns.com',
+          description: `I worked alongside two other developers to develop and design an application that supports the Animal Crossing: New Horizions and Animal Crossing: New Leaf communities, each with tens of millions of unique users. The application was built with Vue and integrated unique QR Code reading and writing libraries.`,
+          list: ['Featured in Wall Street Journal, Kotaku, Polygon, Washington Post', 'Forked by Getty Museum, the Metropolitan Museum of Art, Jackbox Games', 'Used by the Joe Biden 2020 Campaign and more'],
+          image: {
+            src: '../assets/acpatterns.png',
+            alt: 'A screenshot of the acpatterns.com pattern-drawing tool'
+          },
         },
         {
-          name: 'Vibrant: Emotional Health',
-          subheader: '',
-          description: '',
-          image: '',
+          name: 'vibrant: emotional health',
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis eleifend lacus. 
+          Nunc tincidunt volutpat tempor. Integer imperdiet eros quis velit aliquet, in consectetur lorem vulputate. Aenean vitae tempus leo. Donec lorem tortor, fermentum 
+          a venenatis at, tincidunt at orci. Cras ultricies erat porta euismod lobortis. Praesent pulvinar congue elementum.
+          Aliquam convallis nibh consequat lectus efficitur convallis. Etiam laoreet lorem lectus, eget pharetra erat consequat quis. Etiam tincidunt ultrices vehicula.`,
+          image: {
+            src: '',
+            alt: 'Two mobile devices showing different designs on their screens'
+          },
         },
         {
-          name: 'Novamei',
-          subheader: '',
-          description: '',
-          image: '',
+          name: 'novamei',
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis eleifend lacus. 
+          Nunc tincidunt volutpat tempor. Integer imperdiet eros quis velit aliquet, in consectetur lorem vulputate. Aenean vitae tempus leo. Donec lorem tortor, fermentum 
+          a venenatis at, tincidunt at orci. Cras ultricies erat porta euismod lobortis. Praesent pulvinar congue elementum.
+          Aliquam convallis nibh consequat lectus efficitur convallis. Etiam laoreet lorem lectus, eget pharetra erat consequat quis. Etiam tincidunt ultrices vehicula.`,
+          image: {
+            src: '',
+            alt: 'Novamei logo'
+          },
+        },
+        {
+          name: 'discord bots',
+          description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis eleifend lacus. 
+          Nunc tincidunt volutpat tempor. Integer imperdiet eros quis velit aliquet, in consectetur lorem vulputate. Aenean vitae tempus leo. Donec lorem tortor, fermentum 
+          a venenatis at, tincidunt at orci. Cras ultricies erat porta euismod lobortis. Praesent pulvinar congue elementum.
+          Aliquam convallis nibh consequat lectus efficitur convallis. Etiam laoreet lorem lectus, eget pharetra erat consequat quis. Etiam tincidunt ultrices vehicula.`,
+          image: {
+            src: '',
+            alt: 'Discord logo'
+          }
         },
       ]
     }
