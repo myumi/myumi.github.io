@@ -41,18 +41,15 @@ export default {
     display: flex;
     flex-direction: row;
     position: relative;
+    padding: 0 0 0 50px;
 
     @include desktop {
       flex-direction: row;
+      padding: 0 0 0 100px;
     }
 
     .info {
-      margin: 0 0 0 50px;
       width: 480px;
-        
-      @include desktop {
-        margin: 0 0 0 100px;
-      }
 
       .text {
         h1 {
@@ -75,7 +72,7 @@ export default {
         }
 
         h3 {
-          font-weight: 500;
+          font-weight: 400;
 
           @include desktop {
             font-size: 18px;
@@ -112,7 +109,6 @@ export default {
             background: linear-gradient(90deg, $lavender 0%, $periwinkle 100%);
             color: $white;
             margin: 0 0 10px 0;
-
 
             @include desktop {
               margin: 0 30px 0 0;

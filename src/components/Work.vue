@@ -75,13 +75,27 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../sass/main.scss';
+
   .work--headers {
-    text-align: center;
+    text-align: left;
+    padding: 0 0 0 50px;
+
+    @include desktop {
+      flex-direction: row;
+      padding: 0 0 0 100px;
+    }
+
     h1 {
+      display: block;
       font-size: 48px;
       font-weight: 600;
       line-height: 58px;
-      margin: 80px 0 0;
+      margin: 80p
+      x 0 10px;
+    }
+    h2 {
+      font-weight: 400;
     }
   }
 </style>

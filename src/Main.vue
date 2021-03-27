@@ -3,6 +3,7 @@
     <Navigation />
     <Profile />
     <Work />
+    <About />
     <Footer />
   </main>
 </template>
@@ -11,11 +12,12 @@
 import Navigation from './components/Navigation.vue'
 import Profile from './components/Profile.vue'
 import Work from './components/Work.vue'
+import About from './components/About.vue'
 import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
-  components: { Navigation, Profile, Work, Footer }
+  components: { Navigation, Profile, Work, About, Footer }
 }
 </script>
 
@@ -24,6 +26,6 @@ export default {
 
   main {
     margin: auto;
-    max-width: 1540px;
+    max-width: 1200px;
   }
 </style>
