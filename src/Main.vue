@@ -5,7 +5,7 @@
     <Work />
     <About /> -->
     <Contact />
-    <!-- <Footer /> -->
+    <Footer />
   </main>
 </template>
 
@@ -15,7 +15,7 @@ import Navigation from './components/Navigation.vue'
 // import Work from './components/Work.vue'
 // import About from './components/About.vue'
 import Contact from './components/Contact.vue'
-// import Footer from './components/Footer.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   // contact, navigation, footer, about me, profile, work
@@ -26,7 +26,7 @@ export default {
     // Work, 
     // About, 
     Contact, 
-    // Footer 
+    Footer 
   }
 }
 </script>
