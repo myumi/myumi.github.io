@@ -40,27 +40,30 @@ export default {
     background-color: #E8E6FC;
     color: #6155C5;
     font-size: 18px;
+    padding: 20px 0;
     line-height: 34px;
-    width: 100%;
-
-    @include tablet-portrait {
-      height: 200px;
-    }
+    width: 100vw;
 
     .footer--content {
       display: flex;
       flex-direction: column;
 
       box-sizing: border-box;
-      padding: 20px 40px;
+      margin: auto;
+      padding: 0 40px;
       width: 100%;
+      max-width: 1200px;
 
       @include tablet-portrait {
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
 
-        padding: 0 40px;
+        padding: 0 50px;
+      }
+
+      @include desktop {
+        box-sizing: content-box;
       }
 
       .footer--left {

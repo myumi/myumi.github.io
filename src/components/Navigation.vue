@@ -24,7 +24,8 @@ export default {
     align-items: center;
 
     height: 80px;
-    margin: 0 30px;
+    margin: auto;
+    max-width: 1200px;
 
     nav {
       flex: 1 1 0;

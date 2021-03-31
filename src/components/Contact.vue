@@ -28,12 +28,16 @@
     flex-direction: column;
 
     color: $dark-grey;
-    padding: 50px;
+    padding: 40px;
+    margin: auto;
+    max-width: 1200px;
 
     @include tablet-portrait {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+
+      padding: 50px;
     }
 
     .contact--info {

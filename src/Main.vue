@@ -30,12 +30,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-  @import './sass/main.scss';
-
-  main {
-    margin: auto;
-    max-width: 1200px;
-  }
-</style>
