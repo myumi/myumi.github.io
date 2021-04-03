@@ -37,7 +37,7 @@
       justify-content: space-between;
       align-items: center;
 
-      padding: 50px;
+      padding: 30px 50px;
     }
 
     .contact--info {
