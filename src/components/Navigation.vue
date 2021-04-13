@@ -3,7 +3,7 @@
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#work">Work</a>
-      <a href="#contacts">Contacts</a>
+      <a href="#contact">Contact</a>
       <a href="../assets/resume.pdf">Download CV</a>
     </nav>
   </div>

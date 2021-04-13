@@ -12,25 +12,22 @@
         <button class="outlined">Download CV</button>
       </div>
 
-      <Connect />
+      <div class="connect">
+        <Connect />
+      </div>
     </div>
 
     <div class="graphic">
       <img src="../assets/me.png" alt="A girl with pink hair, glasses, and a cat sitting while looking at a laptop" />
-    </div>
-
-    <div class="triangle">
-      <Triangle />
     </div>
   </div>
 </template>
 
 <script>
 import Connect from './Connect'
-import Triangle from './svgs/Triangle'
 
 export default {
-  components: { Connect, Triangle }
+  components: { Connect }
 }
 </script>
 
@@ -39,44 +36,56 @@ export default {
 
   #profile {
     display: flex;
-    flex-direction: row;
-    position: relative;
-    padding: 0 0 0 50px;
+    flex-direction: column;
 
-    @include desktop {
+    color: $dark-grey;
+    padding: 10px 40px;
+    margin: auto;
+    max-width: 1200px;
+
+    @include tablet-portrait {
       flex-direction: row;
-      padding: 0 0 0 100px;
+      justify-content: space-between;
+
+      padding: 30px 50px;
     }
 
     .info {
-      width: 480px;
+      margin: 0 0 10px;
+
+      @include tablet-portrait {
+        margin: unset;
+      }
 
       .text {
         h1 {
-          font-weight: 700;
+          font-weight: 600;
 
           @include desktop {
             font-size: 48px;
-            line-height: 58px;
           }
         }
 
         h2 {
           font-weight: 500;
 
+          @include tablet-portrait {
+            max-width: 350px;
+          }
+
           @include desktop {
             font-size: 36px;
-            line-height: 42px;
-            margin: 8px 0 20px;
+            max-width: 550px;
           }
         }
 
         h3 {
-          font-weight: 400;
+          font-size: 16px;
+          font-weight: 500;
+          margin: 10px 0 0;
 
-          @include desktop {
-            font-size: 18px;
-            line-height: 22px;
+          @include tablet-portrait {
+            font-weight: 18px;
           }
         }
       }
@@ -90,27 +99,23 @@ export default {
 
         button {
           border-radius: 5px;
-          box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.05), 
-              3px 3px 15px 2px rgba(0, 0, 0, 0.04), 
-              1px 1px 8px 1px rgba(0, 0, 0, 0.02);
           color: $pink;
           font-size: 18px;
           font-weight: 600;
           height: 50px;
+          width: 130px;
           line-height: 24px;
-          width: 160px;
-          display: block;
 
-          @include desktop {
-            display: inline-block;
+          @include tablet-portrait {
+            width: 160px;
           }
 
           &.filled {
             background: linear-gradient(90deg, $lavender 0%, $periwinkle 100%);
             color: $white;
-            margin: 0 0 10px 0;
+            margin: 0 10px 0 0;
 
-            @include desktop {
+            @include tablet-portrait {
               margin: 0 30px 0 0;
             }
           }
@@ -118,33 +123,34 @@ export default {
           &.outlined {
             position: relative;
             box-sizing: border-box;
-
             color: $lavender;
             background: $white;
             border: 1px solid $periwinkle;
           }
         }
       }
-    }
 
-    .graphic {
-      z-index: 1; 
+      .connect {
+        display: none;
 
-      img {
-        height: 450px;
-
-        @include desktop {
-          height: 580px;
+        @include tablet-portrait {
+          display: unset;
         }
       }
     }
 
-    .triangle {
-      position: absolute;
-      z-index: -1;
-      top: -85px;
-      right: 0px;
-    }
+    .graphic {
+      img {
+        height: 350px;
 
-}
+        @include tablet-portrait {
+          height: 350px;
+        }
+
+        @include desktop {
+          height: 550px;
+        }
+      }
+    }
+  }
 </style>

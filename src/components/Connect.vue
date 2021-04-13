@@ -45,9 +45,6 @@ export default {
     .connect--icon {
       background: $periwinkle;
       border-radius: 100%;
-      box-shadow: 6px 6px 20px 4px rgba(0, 0, 0, 0.05), 
-          3px 3px 15px 2px rgba(0, 0, 0, 0.04), 
-          1px 1px 8px 1px rgba(0, 0, 0, 0.02);
       height: 30px;
       padding: 10px;
       width: 30px;
