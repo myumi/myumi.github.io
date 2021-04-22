@@ -54,12 +54,12 @@
     text-align: center;
     margin: 0 auto;
     height: 400px;
-    width: 284px;
+    width: 350px;
 
     @include desktop {
       margin: 0;
       height: 673px;
-      width: 478px;
+      width: 600px;
     }
   }
 

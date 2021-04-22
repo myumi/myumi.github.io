@@ -2,7 +2,7 @@
   <main>
     <Navigation />
     <Profile />
-    <!-- <Work /> -->
+    <Work />
     <About />
     <Contact />
     <Footer />
@@ -12,7 +12,7 @@
 <script>
 import Navigation from './components/Navigation.vue'
 import Profile from './components/Profile.vue'
-// import Work from './components/Work.vue'
+import Work from './components/Work.vue'
 import About from './components/About.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
@@ -24,7 +24,7 @@ export default {
   components: { 
     Navigation, 
     Profile, 
-    // Work, 
+    Work, 
     About, 
     Contact, 
     Footer 
