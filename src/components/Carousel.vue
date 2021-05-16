@@ -48,7 +48,7 @@ export default {
       moveClockwise: true,
       projects: [
         {
-          name: 'acpatterns.com',
+          title: 'acpatterns.com',
           description: `I worked alongside two other developers to develop and design an application that supports the Animal Crossing: New Horizions and Animal Crossing: New Leaf communities, each with tens of millions of unique users. The application was built with Vue and integrated unique QR Code reading and writing libraries.`,
           list: ['Featured in Wall Street Journal, Kotaku, Polygon, Washington Post', 'Forked by Getty Museum, the Metropolitan Museum of Art, Jackbox Games', 'Used by the Joe Biden 2020 Campaign and more'],
           image: {
@@ -57,7 +57,7 @@ export default {
           },
         },
         {
-          name: 'vibrant: emotional health',
+          title: 'Vibrant: Emotional Health',
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis eleifend lacus. 
           Nunc tincidunt volutpat tempor. Integer imperdiet eros quis velit aliquet, in consectetur lorem vulputate. Aenean vitae tempus leo. Donec lorem tortor, fermentum 
           a venenatis at, tincidunt at orci. Cras ultricies erat porta euismod lobortis. Praesent pulvinar congue elementum.
@@ -68,7 +68,7 @@ export default {
           },
         },
         {
-          name: 'novamei',
+          title: 'Novamei',
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis eleifend lacus. 
           Nunc tincidunt volutpat tempor. Integer imperdiet eros quis velit aliquet, in consectetur lorem vulputate. Aenean vitae tempus leo. Donec lorem tortor, fermentum 
           a venenatis at, tincidunt at orci. Cras ultricies erat porta euismod lobortis. Praesent pulvinar congue elementum.
@@ -79,7 +79,7 @@ export default {
           },
         },
         {
-          name: 'discord bots',
+          title: 'Discord Bots',
           description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis eleifend lacus. 
           Nunc tincidunt volutpat tempor. Integer imperdiet eros quis velit aliquet, in consectetur lorem vulputate. Aenean vitae tempus leo. Donec lorem tortor, fermentum 
           a venenatis at, tincidunt at orci. Cras ultricies erat porta euismod lobortis. Praesent pulvinar congue elementum.

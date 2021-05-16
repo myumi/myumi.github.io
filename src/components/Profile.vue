@@ -1,35 +1,33 @@
 <template>
   <div id="profile">
-    <div class="info">
-      <div class="text">
-        <h1>Hi, I’m Mayumi.</h1>
-        <h2>I’m a web developer and designer based anywhere.</h2>
-        <h3>(That means I like to work remotely.)</h3>
+    <img
+      class="profile__image"
+      src="../assets/me.png" 
+      alt="A girl with pink hair, glasses, and a cat sitting while looking at a laptop" 
+    />
+
+    <div class="profile__info">
+      <div class="profile__text">
+        <h1 class="profile__text--h1"> 
+          Hi, I’m
+          <span class="profile__text--h1--highlight">Mayumi</span>.
+        </h1>
+        <h2 class="profile__text--h2">I’m a web developer and designer based anywhere.</h2>
+        <h3 class="profile__text--h3">(That means I like to work remotely.)</h3>
+        <p class="profile__paragraph">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
+          Velit officia consequat duis enim velit mollit. 
+          Exercitation veniam consequat sunt nostrud amet.
+        </p>
       </div>
 
-      <div class="buttons">
-        <button class="filled">Contact Me</button>
-        <button class="outlined">Download CV</button>
+      <div class="profile__buttons">
+        <button class="profile__button--filled">Contact Me</button>
+        <button class="profile__button--outline">Download CV</button>
       </div>
-
-      <div class="connect">
-        <Connect />
-      </div>
-    </div>
-
-    <div class="graphic">
-      <img src="../assets/me.png" alt="A girl with pink hair, glasses, and a cat sitting while looking at a laptop" />
     </div>
   </div>
 </template>
-
-<script>
-import Connect from './Connect'
-
-export default {
-  components: { Connect }
-}
-</script>
 
 <style lang="scss">
   @import '../sass/main.scss';
@@ -37,120 +35,122 @@ export default {
   #profile {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 
-    color: $dark-grey;
-    padding: 10px 40px;
-    margin: auto;
-    max-width: 1200px;
+    height: 100vh;
+    margin: 0 auto;
+
+    @include tablet-landscape {
+      flex-direction: row-reverse;
+      max-width: 1200px;
+    }
+  }
+
+  .profile__image {
+    height: 50%;
+    max-width: 600px;
+
+    @include respond-to-height(800px) {
+      height: unset;
+      width: 80%;
+    }
 
     @include tablet-portrait {
-      flex-direction: row;
-      justify-content: space-between;
-
-      padding: 30px 50px;
+      height: unset;
+      width: 100%;
     }
+  }
 
-    .info {
-      margin: 0 0 10px;
+  .profile__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-      @include tablet-portrait {
-        margin: unset;
-      }
-
-      .text {
-        h1 {
-          font-weight: 600;
-
-          @include desktop {
-            font-size: 48px;
-          }
-        }
-
-        h2 {
-          font-weight: 500;
-
-          @include tablet-portrait {
-            max-width: 350px;
-          }
-
-          @include desktop {
-            font-size: 36px;
-            max-width: 550px;
-          }
-        }
-
-        h3 {
-          font-size: 16px;
-          font-weight: 500;
-          margin: 10px 0 0;
-
-          @include tablet-portrait {
-            font-weight: 18px;
-          }
-        }
-      }
-
-      .buttons {
-        margin: 20px 0;
-
-        @include desktop {
-          margin: 30px 0;
-        }
-
-        button {
-          border-radius: 5px;
-          color: $pink;
-          font-size: 18px;
-          font-weight: 600;
-          height: 50px;
-          width: 130px;
-          line-height: 24px;
-
-          @include tablet-portrait {
-            width: 160px;
-          }
-
-          &.filled {
-            background: linear-gradient(90deg, $lavender 0%, $periwinkle 100%);
-            color: $white;
-            margin: 0 10px 0 0;
-
-            @include tablet-portrait {
-              margin: 0 30px 0 0;
-            }
-          }
-
-          &.outlined {
-            position: relative;
-            box-sizing: border-box;
-            color: $lavender;
-            background: $white;
-            border: 1px solid $periwinkle;
-          }
-        }
-      }
-
-      .connect {
-        display: none;
-
-        @include tablet-portrait {
-          display: unset;
-        }
-      }
+    @include tablet-landscape {
+      width: 50%;
     }
+  }
 
-    .graphic {
-      img {
-        height: 350px;
-
-        @include tablet-portrait {
-          height: 350px;
-        }
-
-        @include desktop {
-          height: 550px;
-        }
-      }
+  .profile__text {
+    @include tablet-portrait {
+      max-width: 500px;
     }
+  }
+
+  .profile__text--h1, .profile__text--h2, .profile__text--h3 {
+    margin: 2px 0;
+  }
+
+  .profile__text--h1 {
+    font-size: 36px;
+    font-weight: 600;
+
+    @include tablet-landscape {
+      font-size: 48px;
+    }
+  }
+
+  .profile__text--h1--highlight {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, $pink 50%);
+    border-radius: 2px;
+    padding: 0 3px;
+  }
+
+  .profile__text--h2 {
+    font-size: 24px;
+    font-weight: 500;
+
+    @include tablet-landscape {
+      font-size: 36px;
+    }
+  }
+
+  .profile__text--h3 {
+    font-size: 16px;
+    font-weight: 400;
+
+    @include tablet-landscape {
+      font-size: 18px;
+    }
+  }
+
+  .profile__paragraph {
+    color: $sub-text;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 15px 0;
+
+    @include tablet-landscape {
+      font-size: 20px;
+    }
+  }
+
+  .profile__buttons {
+    display: flex;
+    flex-direction: row;
+
+    @include tablet-portrait {
+      display: unset;
+    }
+  }
+
+  .profile__button--filled, .profile__button--outline {
+    border-radius: 20px;
+    flex: 1 1 0;
+    font-weight: 600;
+    padding: 10px 20px;
+    width: 160px;
+  }
+
+  .profile__button--filled {
+    background: linear-gradient(90deg, $magenta 0%, $peach 100%);
+    color: $white;
+    margin: 0 10px 0 0;
+  }
+
+  .profile__button--outline {
+    color: $pink;
+    border: 2px solid $pink;
   }
 </style>

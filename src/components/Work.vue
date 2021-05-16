@@ -5,14 +5,6 @@
       <h2>These are some projects I've left my mark on.</h2>
     </div>
     <div class="work--projects">
-      <!-- <Project 
-        v-for="{ name, description, list, image } in projects"
-        :name="name"
-        :description="description"
-        :list="list"
-        :image="image"
-        :key="name"
-      /> -->
       <Carousel />
     </div>
   </div>

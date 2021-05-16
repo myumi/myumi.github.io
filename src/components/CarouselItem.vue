@@ -2,7 +2,7 @@
   <div id="carousel-item">
     <img class="carousel-item--image" :src="image.path" :alt="image.alt" />
     <h1 class="carousel-item--title">{{ title }}</h1>
-    <p class="carousel-item--description" :html="description"></p>
+    <p class="carousel-item--description" :html="description">{{ description }}</p>
   </div>
 </template>
 
