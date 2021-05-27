@@ -3,7 +3,8 @@
     <img
       class="profile__image"
       src="../assets/me.png" 
-      alt="A girl with pink hair, glasses, and a cat sitting while looking at a laptop" 
+      alt="A girl with pink hair, glasses, and a cat sitting while looking at a laptop"
+      title="Artwork by Paraplue Illustrations" 
     />
 
     <div class="profile__info">
@@ -38,8 +39,18 @@
     align-items: center;
     justify-content: space-between;
 
-    height: 100vh;
-    margin: 0 auto;
+    height: 90vh;
+    margin: 15px auto 0;
+    min-height: 600px;
+    max-height: 640px;
+
+    @include respond-to-height(700px) {
+      margin: unset;
+    }
+
+    @include tablet-portrait {
+      height: unset;
+    }
 
     @include tablet-landscape {
       flex-direction: row-reverse;
@@ -48,7 +59,7 @@
   }
 
   .profile__image {
-    height: 50%;
+    height: 300px;
     max-width: 600px;
 
     @include respond-to-height(800px) {
@@ -83,7 +94,7 @@
   }
 
   .profile__text--h1 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 600;
 
     @include tablet-landscape {
@@ -98,7 +109,7 @@
   }
 
   .profile__text--h2 {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 500;
 
     @include tablet-landscape {
@@ -119,9 +130,11 @@
     color: $sub-text;
     font-size: 18px;
     font-weight: 300;
-    margin: 15px 0;
+    line-height: 1.3;
+    margin: 5px 0;
 
-    @include tablet-landscape {
+    @include respond-to-height(700px) {
+      margin: 15px 0;
       font-size: 20px;
     }
   }
@@ -139,8 +152,8 @@
     border-radius: 20px;
     flex: 1 1 0;
     font-weight: 600;
-    padding: 10px 20px;
-    width: 160px;
+    padding: 12px 15px;
+    width: 150px;
   }
 
   .profile__button--filled {
@@ -150,7 +163,7 @@
   }
 
   .profile__button--outline {
-    color: $pink;
+    color: $magenta;
     border: 2px solid $pink;
   }
 </style>
