@@ -37,24 +37,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
     height: 90vh;
-    margin: 15px auto 0;
+    margin: 0 auto;
     min-height: 600px;
-    max-height: 640px;
-
-    @include respond-to-height(700px) {
-      margin: unset;
-    }
 
     @include tablet-portrait {
       height: unset;
+      width: 500px;
     }
 
     @include tablet-landscape {
       flex-direction: row-reverse;
-      max-width: 1200px;
+      justify-content: space-between;
+      width: 1100px;
     }
   }
 
@@ -62,14 +58,9 @@
     height: 300px;
     max-width: 600px;
 
-    @include respond-to-height(800px) {
-      height: unset;
-      width: 80%;
-    }
-
     @include tablet-portrait {
       height: unset;
-      width: 100%;
+      width: 500px;
     }
   }
 

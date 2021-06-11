@@ -1,20 +1,17 @@
 <template>
   <div id="work">
-    <div class="work--headers">
-      <h1>Work</h1>
-      <h2>These are some projects I've left my mark on.</h2>
+    <div class="work__headers">
+      <h1 class="headers__h1">Work</h1>
+      <h2 class="headers__h2">These are some projects I've left my mark on.</h2>
     </div>
     <div class="work--projects">
-      <Carousel />
     </div>
   </div>
 </template>
 
 <script>
-import Carousel from './Carousel'
 
 export default {
-  components: { Carousel }
 }
 </script>
 
@@ -22,32 +19,41 @@ export default {
   @import '../sass/main.scss';
 
   #work {
-    color: $dark-grey;
-    padding: 10px 40px;
-    margin: auto;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 20px auto 0;
+    min-height: 600px;
 
     @include tablet-portrait {
-      padding: 30px 50px;
+      width: 500px;
     }
 
-    .work--headers {
-      text-align: left;
-
-      h1 {
-        display: block;
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 58px;
-      }
-
-      h2 {
-        font-weight: 400;
-      }
+    @include tablet-landscape {
+      width: 1100px;
     }
-    
-    .work--projects {
-      // display: none;
+  }
+
+  .work__headers {
+    width: 100%;
+  }
+
+  .headers__h1 {
+    font-size: 28px;
+    font-weight: 600;
+
+    @include tablet-landscape {
+      font-size: 48px;
+    }
+  }
+
+  .headers__h2 {
+    font-size: 22px;
+    font-weight: 500;
+
+    @include tablet-landscape {
+      font-size: 24px;
     }
   }
 </style>

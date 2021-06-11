@@ -2,7 +2,7 @@
   <main>
     <!-- <Navigation /> -->
     <Profile />
-    <!-- <Work /> -->
+    <Work />
     <!-- <About /> -->
     <!-- <Contact /> -->
     <!-- <Footer /> -->
@@ -12,7 +12,7 @@
 <script>
 // import Navigation from './components/Navigation.vue'
 import Profile from './components/Profile.vue'
-// import Work from './components/Work.vue'
+import Work from './components/Work.vue'
 // import About from './components/About.vue'
 // import Contact from './components/Contact.vue'
 // import Footer from './components/Footer.vue'
@@ -24,7 +24,7 @@ export default {
   components: { 
     // Navigation, 
     Profile, 
-    // Work, 
+    Work, 
     // About, 
     // Contact, 
     // Footer 
@@ -33,12 +33,16 @@ export default {
 </script>
 
 <style lang="scss">
-  #main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  @import './sass/main.scss';
 
+  main {
+    display: flex;
+    flex-direction: column;
+
+    color: $main-text;
     height: 100%;
-    padding: 0 20px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    max-width: 1200px;
   }
 </style>
