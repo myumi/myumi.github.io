@@ -22,3 +22,13 @@ html, body {
   scroll-behavior: smooth;
   width: 100%;
 }
+
+a {
+  color: $magenta;
+  text-decoration: none;
+
+  &:hover {
+    color: $magenta;
+    color: $link;
+  }
+}

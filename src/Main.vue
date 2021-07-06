@@ -3,7 +3,7 @@
     <!-- <Navigation /> -->
     <Profile />
     <Work />
-    <!-- <About /> -->
+    <About />
     <!-- <Contact /> -->
     <!-- <Footer /> -->
   </main>
@@ -13,7 +13,7 @@
 // import Navigation from './components/Navigation.vue'
 import Profile from './components/Profile.vue'
 import Work from './components/Work.vue'
-// import About from './components/About.vue'
+import About from './components/About.vue'
 // import Contact from './components/Contact.vue'
 // import Footer from './components/Footer.vue'
 
@@ -25,7 +25,7 @@ export default {
     // Navigation, 
     Profile, 
     Work, 
-    // About, 
+    About, 
     // Contact, 
     // Footer 
   }

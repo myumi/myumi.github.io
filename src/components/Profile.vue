@@ -16,9 +16,9 @@
         <h2 class="profile__text--h2">I’m a web developer and designer based anywhere.</h2>
         <h3 class="profile__text--h3">(That means I like to work remotely.)</h3>
         <p class="profile__paragraph">
-          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. 
-          Velit officia consequat duis enim velit mollit. 
-          Exercitation veniam consequat sunt nostrud amet.
+          I'm currently redesigning this site and updating it with my most recent projects.
+          If you'd like to get in touch and learn more about me, or to work on something together,
+          please get in touch with me at <a href="mailto:myumiak@gmail.com">myumiak@gmail.com</a>.
         </p>
       </div>
 
