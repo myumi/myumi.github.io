@@ -1,5 +1,5 @@
 <template>
-  <div id="about">
+  <section id="about">
     <h1 class="about__h1 about__h1--highlight">About me</h1>
     <div class="about__content">
       <img class="about__image" src="" alt='Photo of Mayumi' />
@@ -19,9 +19,13 @@
           I have a formal education in Computer Science, but all of my web development knowledge and skills are self-taught. 
           I love working on side projects for fun, but when it comes to professional work, I prefer to stick to non-profit or programs with socioeconomic impact.
         </p>
+        <p>
+          I care about making technology as accessible as possible. I value making things look nice just as much as they function intuitively.
+        </p>
+        <p>Outside of dev, I love playing video games with my friends, riding horses, making very specific playlists on Spotify, and cooking.</p>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -32,15 +36,9 @@
 
   #about {
     flex-direction: column;
+    margin: 40px auto;
 
-    margin: 20px auto 0;
-    min-height: 600px;
-
-    @include tablet-portrait {
-      width: 500px;
-    }
-
-    @include tablet-landscape {
+    @include desktop {
       width: 1100px;
     }
   }
@@ -73,14 +71,20 @@
   }
 
   .about__image {
-    height: 600px;
-    width: 500px;
+
+    @include tablet-landscape {
+      height: 600px;
+      width: 500px;
+    }
   }
 
   .about__info {
     align-self: stretch;
     line-height: 1.5;
-    width: 500px;
+
+    @include tablet-landscape {
+      width: 500px;
+    }
   }
 
 </style>

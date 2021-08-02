@@ -1,5 +1,5 @@
 <template>
-  <div id="profile">
+  <section id="profile">
     <img
       class="profile__image"
       src="../assets/me.png" 
@@ -27,7 +27,7 @@
         <button class="profile__button--outline">Download CV</button>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">
@@ -37,19 +37,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    height: 90vh;
-    margin: 0 auto;
+    
+    margin: 20px auto 0;
     min-height: 600px;
 
     @include tablet-portrait {
+      margin: 0 auto;
       height: unset;
-      width: 500px;
     }
 
     @include tablet-landscape {
       flex-direction: row-reverse;
       justify-content: space-between;
+    }
+
+    @include desktop {
       width: 1100px;
     }
   }
@@ -71,12 +73,6 @@
 
     @include tablet-landscape {
       width: 50%;
-    }
-  }
-
-  .profile__text {
-    @include tablet-portrait {
-      max-width: 500px;
     }
   }
 
@@ -134,7 +130,7 @@
     display: flex;
     flex-direction: row;
 
-    @include tablet-portrait {
+    @include desktop {
       display: unset;
     }
   }

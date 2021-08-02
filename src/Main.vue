@@ -1,11 +1,13 @@
 <template>
   <main>
     <!-- <Navigation /> -->
-    <Profile />
-    <Work />
-    <About />
+    <div class="main__content">
+      <Profile />
+      <Work />
+      <About />
+    </div>
     <!-- <Contact /> -->
-    <!-- <Footer /> -->
+    <Footer />
   </main>
 </template>
 
@@ -14,35 +16,38 @@
 import Profile from './components/Profile.vue'
 import Work from './components/Work.vue'
 import About from './components/About.vue'
-// import Contact from './components/Contact.vue'
-// import Footer from './components/Footer.vue'
+import Footer from './components/Footer.vue'
 
 export default {
-  // contact, navigation, footer, about me, profile, work
-  // todo: add blobs to about
-  name: 'App',
+  name: 'Portfolio',
   components: { 
     // Navigation, 
     Profile, 
     Work, 
     About, 
-    // Contact, 
-    // Footer 
+    Footer 
   }
 }
 </script>
 
 <style lang="scss">
   @import './sass/main.scss';
+  @import './sass/defaults.scss';
 
   main {
     display: flex;
     flex-direction: column;
 
-    color: $main-text;
     height: 100%;
-    padding: 40px 20px;
-    margin: 0 auto;
+  }
+
+  .main__content {
+    padding: 0 20px;
     max-width: 1200px;
+    margin: 0 auto;
+
+    @include tablet-landscape {
+      padding: 0 40px;
+    }
   }
 </style>

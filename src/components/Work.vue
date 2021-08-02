@@ -1,5 +1,5 @@
 <template>
-  <div id="work">
+  <section id="work">
     <div class="work__headers">
       <h1 class="headers__h1 headers__h1--highlight">Work</h1>
       <h2 class="headers__h2">These are some projects I've left my mark on.</h2>
@@ -19,7 +19,7 @@
         :github="projects.github"
       />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -37,12 +37,13 @@ export default {
           imageAlt: `A collection of designs and mockups`,
           label: 'Web apps and design',
           title: 'Vibrant Emotional Health',
-          tools: ['React', 'Gatsby', 'Vue', 'SCSS', 'Figma'],
-          description: `I worked alongside two other developers to develop and design an 
-            application that supports a community with tens of millions of users. This project was built in Vue, integrating and updating a similar tool
-            one of the other developers had worked on, as well as a version of the ZXing library by Google I modified to support our needs.
-            As well as development, my responsibilites included moderating the Discord community for the project as well as answering user questions and
-            applying changes and fixes to suite the ever-changing needs of the community.`,
+          tools: ['React', 'Gatsby', 'Vue', 'Cypress', 'SCSS', 'Figma'],
+          description: `<p>I worked alongside two other developers to develop and design an 
+            application that supports a community with tens of millions of users.</p>
+            <p>This project was built in Vue, integrating and updating a similar tool
+            one of the other developers had worked on, as well as a version of the ZXing library by Google I modified to support our needs.</p>
+            <p>As well as development, my responsibilites included moderating the Discord community for the project as well as answering user questions and
+            applying changes and fixes to suite the ever-changing needs of the community.</p>`,
           recognitions: {
             featured: ['Wall Street Journal', 'Kotaku', 'Polygon', 'Washington Post'],
             forked: ['Getty Museum', 'the Metropolitan Museum of Art', 'Jackbox Games'],
@@ -56,11 +57,12 @@ export default {
           label: 'Web App',
           title: 'ACPatterns',
           tools: ['Vue', 'SCSS'],
-          description: `I worked alongside two other developers to develop and design an 
-            application that supports a community with tens of millions of users. This project was built in Vue, integrating and updating a similar tool
-            one of the other developers had worked on, as well as a version of the ZXing library by Google I modified to support our needs.
-            As well as development, my responsibilites included moderating the Discord community for the project as well as answering user questions and
-            applying changes and fixes to suite the ever-changing needs of the community.`,
+          description: `<p>I worked alongside two other developers to develop and design an 
+            application that supports a community with tens of millions of users.</p>
+            <p>This project was built in Vue, integrating and updating a similar tool
+            one of the other developers had worked on, as well as a version of the ZXing library by Google I modified to support our needs.</p>
+            <p>As well as development, my responsibilites included moderating the Discord community for the project as well as answering user questions and
+            applying changes and fixes to suite the ever-changing needs of the community.</p>`,
           recognitions: {
             featured: ['Wall Street Journal', 'Kotaku', 'Polygon', 'Washington Post'],
             forked: ['Getty Museum', 'the Metropolitan Museum of Art', 'Jackbox Games'],
@@ -68,16 +70,18 @@ export default {
           },
         },
         {
-          image: 'acpatterns',
+          image: 'guardian',
           imageAlt: `A snapshot of a website that emulates the pattern-making tool 
             in the Nintendo Switch game Animal Crossing: New Horizions`,
-          label: 'Web App',
-          title: 'ACPatterns',
-          description: `I worked alongside two other developers to develop and design an 
-            application that supports a community with tens of millions of users. This project was built in Vue, integrating and updating a similar tool
-            one of the other developers had worked on, as well as a version of the ZXing library by Google I modified to support our needs.
-            As well as development, my responsibilites included moderating the Discord community for the project as well as answering user questions and
-            applying changes and fixes to suite the ever-changing needs of the community.`,
+          label: 'Web App and Design',
+          title: 'Guardian',
+          tools: ['React', 'TypeScript', 'Cypress', 'SCSS', 'Figma'],
+          description: `<p>I like niche things. If a subculture exists, I am probably going to fall into it. One of those things is pet sims.</p>
+          <p>I started playing Flight Rising back in college, but as the 2019-2X COVID pandemic kicked in, I needed something to distract myself with. 
+          I started playng Flight Rising again with a group of friends and found a few gaps in supporting tools for the game. Although various sites, Google sheets, 
+          and forum posts existed as guides, there was no central hub that had it all.</p>
+          <p>I made Guardian, named after a popular dragon breed on the site, to satisfy the helper tools I found myself needing while I played.</p>
+          <p>This includes a tool to help plan breeding projects, and unlockables guide, as well as price-point tool for selling items.</p>`,
           recognitions: {
             featured: ['Wall Street Journal', 'Kotaku', 'Polygon', 'Washington Post'],
             forked: ['Getty Museum', 'the Metropolitan Museum of Art', 'Jackbox Games'],
@@ -98,14 +102,10 @@ export default {
     flex-direction: column;
     align-items: center;
 
-    margin: 20px auto 0;
+    margin: 40px auto ;
     min-height: 600px;
 
-    @include tablet-portrait {
-      width: 500px;
-    }
-
-    @include tablet-landscape {
+    @include desktop {
       width: 1100px;
     }
   }

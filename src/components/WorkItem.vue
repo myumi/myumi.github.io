@@ -1,12 +1,12 @@
 <template>
-  <div class="work-item">
+  <section class="work-item">
     <img class="work-item__image" :src="image" :alt=imageTitle />
 
     <div class="work-item__text-content">
       <span class="work-item__label">{{ label }}</span>
       <h1 class="work-item__title">{{ title }}</h1>
       <span class="work-item__tools">{{ tools.join(', ') }}</span>
-      <div class="work-item__description">{{ description }}</div>
+      <div class="work-item__description" v-html="description"></div>
       <a 
         v-if="github"
         :href="github"
@@ -16,7 +16,7 @@
       View this project on GitHub
       </a>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -70,38 +70,64 @@ export default {
     margin: 20px auto 10px;
     min-height: 500px;
 
-    @include tablet-portrait {
-      width: 500px;
-    }
+    width: 100%;
 
     @include tablet-landscape {
       flex-direction: row;
       justify-content: space-between;
 
       margin: 50px auto 25px;
-      width: 1100px;
+    }
+
+    &:last-of-type {
+      margin: 0;
     }
 
     &.flipped {
+
       @include tablet-landscape {
         flex-direction: row-reverse;
       }
+
       .work-item__text-content {
-        margin: 0 50px 0 0;
+
+        @include tablet-landscape {
+          margin: 0 50px 0 0;
+        }
       }
     }
   }
 
   .work-item__image {
     align-self: stretch;
-    width: 550px;
+    width: 100%;
+    margin: 0 auto 20px;
+
+    @include tablet-portrait {
+      width: 550px;
+    }
+    
+    @include tablet-landscape {
+      margin: unset;
+    }
   }
 
   .work-item__text-content {
-    align-self: stretch;
+    margin: 0 0 40px 0;
 
-    margin: 0 0 0 50px;
-    width: 500px;
+    &:last-of-type {
+      margin: 0;
+    }
+
+    @include tablet-landscape {
+      align-self: stretch;
+      margin: 0 0 0 50px;
+      width: 50%;
+
+      &:last-of-type {
+        margin: 0 0 0 50px;
+      }
+    }
   }
 
   .work-item__label {
@@ -110,6 +136,7 @@ export default {
 
   .work-item__title {
     font-weight: 500;
+    margin: 10px 0;
   }
 
   .work-item__tools {
