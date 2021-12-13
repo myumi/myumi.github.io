@@ -17,14 +17,14 @@
         <h3 class="profile__text--h3">(That means I like to work remotely.)</h3>
         <p class="profile__paragraph">
           I'm currently redesigning this site and updating it with my most recent projects.
-          If you'd like to get in touch and learn more about me, or to work on something together,
-          please get in touch with me at <a href="mailto:myumiak@gmail.com">myumiak@gmail.com</a>.
+          If you'd like to work on something together,
+          please get in touch with me <a href="mailto:me@mayumi.dev">via email</a>.
         </p>
       </div>
 
       <div class="profile__buttons">
-        <button class="profile__button--filled">Contact Me</button>
-        <button class="profile__button--outline">Download CV</button>
+        <a href="mailto:me@mayumi.dev"><button class="profile__button--filled">Contact Me</button></a>
+        <a href="./assets/Complete CV.pdf.pdf" download="Mayumi Ohara CV"><button class="profile__button--outline">Download CV</button></a>
       </div>
     </div>
   </section>
@@ -43,7 +43,7 @@
 
     @include tablet-portrait {
       margin: 0 auto;
-      height: unset;
+      min-height: unset;
     }
 
     @include tablet-landscape {
@@ -90,7 +90,7 @@
   }
 
   .profile__text--h1--highlight {
-    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, $pink 50%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, $highlight 50%);
     border-radius: 2px;
     padding: 0 3px;
   }
@@ -107,17 +107,19 @@
   .profile__text--h3 {
     font-size: 16px;
     font-weight: 400;
+    margin: 8px 0 2px;
 
     @include tablet-landscape {
       font-size: 18px;
+      margin: 10px 0 2px;
     }
   }
 
   .profile__paragraph {
-    color: $sub-text;
+    color: $paragraph;
     font-size: 18px;
     font-weight: 300;
-    line-height: 1.3;
+    line-height: 1.5;
     margin: 5px 0;
 
     @include respond-to-height(700px) {
@@ -141,16 +143,48 @@
     font-weight: 600;
     padding: 12px 15px;
     width: 150px;
+    position: relative;
+    overflow: hidden;
+    transition: all .5s ease-in-out;
   }
 
   .profile__button--filled {
-    background: linear-gradient(90deg, $magenta 0%, $peach 100%);
-    color: $white;
+    background: $objective;
+    color: #fefefe;
     margin: 0 10px 0 0;
+
+    &:hover {
+      background: darken($objective, 8%);
+      color: #fff;
+    }
   }
 
   .profile__button--outline {
-    color: $magenta;
-    border: 2px solid $pink;
+    color: $objective;
+    border: 2px solid $highlight;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: $highlight;
+      transform: translateX(-100%);
+      transition: all .5s ease-in-out;
+    }
+
+    &:hover {
+      color: #fff;
+      border-color: transparent;
+
+      &:before {
+        background: darken($objective, 8%);
+        transform: translateX(0%);
+      }
+    }
   }
 </style>

@@ -71,7 +71,7 @@
 
   html, body {
     background-color: $background;
-    color: $main-text;
+    color: $paragraph;
     height: 100%;
     margin: 0;
     scroll-behavior: smooth;
@@ -80,12 +80,12 @@
 }
 
 @mixin default-anchor {
-  color: $magenta;
+  color: $objective;
   text-decoration: none;
+  transition: all .5s ease-in-out;
 
   &:hover {
-    color: $magenta;
-    color: $link;
+    color: $subheader;
   }
 }
 

@@ -2,7 +2,7 @@
   <section id="about">
     <h1 class="about__h1 about__h1--highlight">About me</h1>
     <div class="about__content">
-      <img class="about__image" src="" alt='Photo of Mayumi' />
+      <img class="about__image" src="https://images.unsplash.com/photo-1534179523731-b2922018150a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt='Photo of Mayumi' />
       <div class="about__info">
         <p>
           Descended from Japanese royalty and a childhood addiction to Neopets, I started with the basics of programming at an early age. 
@@ -28,9 +28,6 @@
   </section>
 </template>
 
-<script>
-</script>
-
 <style lang="scss" scoped>
 @import '../sass/main.scss';
 
@@ -55,7 +52,7 @@
   }
 
   .about__h1--highlight {
-    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, $pink 50%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, $highlight 50%);
     border-radius: 2px;
     padding: 0 3px;
   }
@@ -71,16 +68,21 @@
   }
 
   .about__image {
+    border-radius: 10px;
 
     @include tablet-landscape {
-      height: 600px;
+      align-self: stretch;
       width: 500px;
     }
   }
 
   .about__info {
     align-self: stretch;
-    line-height: 1.5;
+
+    p {
+      margin: 8px 0;
+      line-height: 1.6 !important;
+    }
 
     @include tablet-landscape {
       width: 500px;

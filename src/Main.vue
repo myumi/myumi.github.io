@@ -1,7 +1,7 @@
 <template>
   <main>
-    <!-- <Navigation /> -->
     <div class="main__content">
+      <Navigation />
       <Profile />
       <Work />
       <About />
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-// import Navigation from './components/Navigation.vue'
+import Navigation from './components/Navigation.vue'
 import Profile from './components/Profile.vue'
 import Work from './components/Work.vue'
 import About from './components/About.vue'
@@ -21,7 +21,7 @@ import Footer from './components/Footer.vue'
 export default {
   name: 'Portfolio',
   components: { 
-    // Navigation, 
+    Navigation, 
     Profile, 
     Work, 
     About, 

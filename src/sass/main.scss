@@ -15,20 +15,10 @@
 
 html, body {
   background-color: $background;
-  color: $main-text;
+  color: $paragraph;
   font-size: 16px;
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
   width: 100%;
-}
-
-a {
-  color: $magenta;
-  text-decoration: none;
-
-  &:hover {
-    color: $magenta;
-    color: $link;
-  }
 }
