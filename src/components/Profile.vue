@@ -1,11 +1,13 @@
 <template>
   <section id="profile">
-    <img
-      class="profile__image"
-      src="../assets/me.png" 
-      alt="A girl with pink hair, glasses, and a cat sitting while looking at a laptop"
-      title="Artwork by Paraplue Illustrations" 
-    />
+    <a href="https://www.paraplue-illustration.com/">
+      <img
+        class="profile__image"
+        src="../assets/me.png" 
+        alt="A girl with pink hair, glasses, and a cat sitting while looking at a laptop"
+        title="Artwork by Paraplue Illustrations" 
+      />
+    </a>
 
     <div class="profile__info">
       <div class="profile__text">
@@ -24,11 +26,21 @@
 
       <div class="profile__buttons">
         <a href="mailto:me@mayumi.dev"><button class="profile__button--filled">Contact Me</button></a>
-        <a href="./assets/Complete CV.pdf.pdf" download="Mayumi Ohara CV"><button class="profile__button--outline">Download CV</button></a>
+        <a href="Complete CV.pdf" download="Mayumi Ohara CV"><button class="profile__button--outline">Download CV</button></a>
       </div>
     </div>
   </section>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        publicPath: process.env.BASE_URL,
+      }
+    }
+  }
+</script>
 
 <style lang="scss">
   @import '../sass/main.scss';
@@ -44,9 +56,7 @@
     @include tablet-portrait {
       margin: 0 auto;
       min-height: unset;
-    }
 
-    @include tablet-landscape {
       flex-direction: row-reverse;
       justify-content: space-between;
     }
@@ -62,6 +72,10 @@
 
     @include tablet-portrait {
       height: unset;
+      width: 400px;
+    }
+
+    @include tablet-landscape {
       width: 500px;
     }
   }
@@ -71,8 +85,9 @@
     flex-direction: column;
     justify-content: center;
 
-    @include tablet-landscape {
-      width: 50%;
+    @include tablet-portrait {
+      padding-right: 20px;
+      max-width: 50%;
     }
   }
 

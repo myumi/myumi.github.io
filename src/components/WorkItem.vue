@@ -6,7 +6,7 @@
       <h1 class="work-item__title">{{ title }}</h1>
       <span class="work-item__tools">{{ tools.join(', ') }}</span>
       <div class="work-item__description" v-html="description"></div>
-      <ul v-if="recognitions" class="work-item__awards">
+      <ul v-if="recognitions.length" class="work-item__awards">
         <li v-for="award in recognitions" :key="award.type">
           <i>{{ award.type }}</i> by {{ award.names.join(', ') }}
         </li>
@@ -14,6 +14,7 @@
       <a 
         v-if="github"
         :href="github"
+        target="_blank"
         class="work-item__github"
       >
       <IconGitHub />
@@ -75,55 +76,56 @@ export default {
     flex-direction: column;
     align-items: center;
 
-    margin: 40px auto 10px;
-
     width: 100%;
+
+    &:nth-child(n+2) {
+      margin: 40px auto 20px;
+    }
+
+    &:last-of-type {
+      margin: 40px auto 0;
+    }
 
     @include tablet-landscape {
       flex-direction: row;
       justify-content: space-between;
 
-      margin: 50px auto;
-      min-height: 600px;
-    }
+      &:nth-child(n+2) {
+        margin: 50px auto 20px;
+      }
 
-    &:last-of-type {
-      margin: 0;
+      &:last-of-type {
+        margin: 50px auto 0;
+      }
     }
   }
 
   .work-item__image {
     align-self: stretch;
-    width: 100%;
     margin: 0 auto 20px;
     border-radius: 10px;
+    max-width: 100%;
 
     @include tablet-portrait {
-      width: 550px;
+      width: 350px;
     }
     
     @include tablet-landscape {
       margin: unset;
+      width: 550px;
     }
   }
 
   .work-item__text-content { 
     position: relative;   
-    margin: 0 0 40px 0;
 
-    &:last-of-type {
-      margin: 0;
+    @include tablet-portrait {
+      align-self: stretch;
     }
 
     @include tablet-landscape {
-      align-self: stretch;
-      margin: 0 0 0 50px;
-      min-height: unset;
-      width: 50%;
-
-      &:last-of-type {
-        margin: 0 0 0 50px;
-      }
+      width: 60%;
+      margin: 0 0 0 40px;
     }
   }
 
@@ -137,8 +139,12 @@ export default {
   .work-item__title {
     color: #183764;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 30px;
     margin: 10px 0;
+
+    @include tablet-landscape {
+      font-size: 36px;
+    }
   }
 
   .work-item__tools {
@@ -186,11 +192,7 @@ export default {
     font-size: 18px;
     width: 260px;
 
-    &:hover {
-      color: #FF7DAD;
-    }
-
-    @include tablet-portrait {
+    @include tablet-landscape {
       position: absolute;
       bottom: 0;
       left: 0;

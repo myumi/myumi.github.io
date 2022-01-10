@@ -84,7 +84,7 @@ export default {
           It was great for stress-relief in between classes and was a wonderful way to stay in touch with my friends over the summers.
           Over the pandemic, we picked it up again as a background for talking with each other over Discord.</p>
           <p>The game is constantly updating and changing. Many of us were getting back into it, and constantly needing to look up specific information. There is no exisiting or currently-maintained Discord bot to do so. So, I made one, and after suffering through the offical API's format and inaccurate information, I quickly discovered why one didn't already exist.</p>
-          <p>However, it's in a working state. Currently, I'm working with another developer friend to build <a href="https://github.com/myumi/elder-drake-api">a middleman API service</a> for the bot so it doesn't have to do as much parsing and object traversing as it currently does, as well as try to format the data to be more consistent.`,
+          <p>However, it's in a working state. Currently, I'm working with another developer friend to build <a href="https://github.com/myumi/elder-drake-api" target="_blank">a middleman API service</a> for the bot so it doesn't have to do as much parsing and object traversing as it currently does, as well as try to format the data to be more consistent.`,
           github: 'https://github.com/myumi/elder-drake',
         },
         {
@@ -122,6 +122,7 @@ export default {
   }
 
   .work__headers {
+    margin: 0 0 15px;
     width: 100%;
   }
 

@@ -5,7 +5,7 @@
       <p class="footer__content">
         Please send me an email at <a href="mailto:me@mayumi.dev">me@mayumi.dev.</a><br />
         Artwork is done by the lovely <a href="https://www.paraplue-illustration.com/">Paraplue Illustration</a>, for my personal use only.<br />
-        Website is designed by me and built in Vue.
+        Website is designed by me and <a href="https://github.com/myumi/portfolio/">built in Vue</a>.
       </p>
     </div>
   </footer>

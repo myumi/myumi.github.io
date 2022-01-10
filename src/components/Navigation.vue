@@ -37,8 +37,6 @@ export default {
       flex: 1 1 0;
       display: flex;
       flex-direction: row;
-      justify-content: center;
-
 
       @include tablet-portrait {
         justify-content: flex-start;

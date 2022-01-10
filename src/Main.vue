@@ -42,11 +42,11 @@ export default {
   }
 
   .main__content {
-    padding: 0 20px;
+    padding: 0 25px;
     max-width: 1200px;
     margin: 0 auto;
 
-    @include tablet-landscape {
+    @include tablet-portrait {
       padding: 0 40px;
     }
   }

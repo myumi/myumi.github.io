@@ -12,17 +12,18 @@
 
         <p>
           Since then, I have travelled across the country to work as a video game developer, and flown back home to to the east coast pursue software development. 
-          Finally, I have come full circle to the niche that fills me with the most joy: web development.
+          Finally, I have come full circle to the niche that fills me with the most joy: web development. As for that, I like where I live now and don't plan on ever moving for work again,
+          so for us to be a perfect fit, the role <b>needs to be remote</b>.
         </p>
 
         <p>
-          I have a formal education in Computer Science, but all of my web development knowledge and skills are self-taught. 
-          I love working on side projects for fun, but when it comes to professional work, I prefer to stick to non-profit or programs with socioeconomic impact.
+          I have a formal education in Computer Science, but all of my web development knowledge and skills are self-taught, driven entirely by a need to make <i>things</i>. 
+          I love working on side projects for fun, but when it comes to professional work, I prefer to stick to non-profit, programs with socioeconomic impact, or something that interests me enough personally.
         </p>
         <p>
           I care about making technology as accessible as possible. I value making things look nice just as much as they function intuitively.
         </p>
-        <p>Outside of dev, I love playing video games with my friends, riding horses, making very specific playlists on Spotify, and cooking.</p>
+        <p>Outside of dev, I love playing games with my friends, riding horses (hunter/jumper, for the fellow horse people out there!), making very specific playlists on Spotify, building custom mechanical keyboards, and cooking.</p>
       </div>
     </div>
   </section>
@@ -44,10 +45,11 @@
     display: inline-block;
     font-size: 28px;
     font-weight: 600;
-    margin: 0 0 10px;
+    margin: 0 0 25px;
 
     @include tablet-landscape {
       font-size: 48px;
+      margin: 0 0 15px;
     }
   }
 
@@ -69,9 +71,11 @@
 
   .about__image {
     border-radius: 10px;
+    height: 450px;
 
     @include tablet-landscape {
       align-self: stretch;
+      height: unset;
       width: 500px;
     }
   }
