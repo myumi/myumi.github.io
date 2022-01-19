@@ -17,6 +17,7 @@
         :tools="project.tools"
         :description="project.description"
         :recognitions="project.recognitions"
+        :url="project.url"
         :github="project.github"
       />
     </div>
@@ -60,12 +61,12 @@ export default {
               names: ['the Joe Biden Campaign', 'and more'],
             },
           ],
+          url: 'https://acpatterns.com',
           github: 'https://github.com/Thulinma/ACNLPatternTool',
         },
         {
           image: 'https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJva2VofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-          imageAlt: `A snapshot of a website that emulates the pattern-making tool 
-            in the Nintendo Switch game Animal Crossing: New Horizions`,
+          imageAlt: `A fanmade tool for the web-based game Flight Rising`,
           label: 'Web App and Design',
           title: 'Guardian',
           tools: ['React', 'Redux', 'TypeScript', 'Google Cloud Platform', 'SCSS', 'Figma'],
@@ -74,6 +75,7 @@ export default {
           I started playng Flight Rising again with a group of friends and found a few gaps in supporting tools for the game. Although various sites, Google sheets, 
           and forum posts existed as guides, there was no central hub that had it all.</p>
           <p>I made Guardian, named after a popular dragon breed on the site, to satisfy the helper tools I found myself needing while I played.</p>`,
+          url: 'https://guardian.mayumi.dev',
           github: 'https://github.com/myumi/guardian',
         },
         {

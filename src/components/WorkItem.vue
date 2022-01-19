@@ -8,10 +8,19 @@
       <h3 class="work-item__tools">{{ tools.join(', ') }}</h3>
       <div class="work-item__links">
         <a 
+          v-if="url"
+          :href="url"
+          target="_blank"
+          class="work-item__icon"
+        >
+          <IconWeb />
+        </a>
+
+        <a 
           v-if="github"
           :href="github"
           target="_blank"
-          class="work-item__github"
+          class="work-item__icon"
         >
           <IconGitHub />
         </a>
@@ -28,45 +37,52 @@
 </template>
 
 <script>
-import IconGitHub from './icons/IconGitHub.vue';
+import IconGitHub from './icons/IconGitHub';
+import IconWeb  from './icons/IconWeb';
+
 export default {
   name: 'WorkItem',
   props: {
     image: {
       type: String,
-      default: ''
+      default: '',
     },
     imageAlt: {
       type: String,
-      default: ''
+      default: '',
     },
     label: {
       type: String,
-      default: 'Project'
+      default: 'Project',
     },
     title: {
       type: String,
-      default: 'Project'
+      default: 'Project',
     },
     tools: {
       type: Array,
-      default: () => []
+      default: () => [],
     },
     description: {
       type: String,
-      default: ''
+      default: '',
     },
     recognitions: {
       type: Array,
       default: () => [],
     },
+    url: {
+      type: String,
+      default: '',
+    },
     github: {
       type: String,
-      default: ''
+      default: '',
     },
   },
   components: {
     IconGitHub,
+    IconWeb,
   }
 }
 </script>
@@ -145,6 +161,10 @@ export default {
   }
 
   .work-item__links {
+    a {
+      margin: 0 10px 0 0;
+    }
+
     @include spacing.element-spacing;
   }
   
