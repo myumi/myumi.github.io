@@ -1,12 +1,8 @@
-// imports
-@import './colors.scss';
-@import './sizing.scss';
-@import './spacing.scss';
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@use 'colors';
+@use 'fonts';
+@use 'spacing';
 
 // resets
-
 @mixin reset-button {
   background-color: transparent;
   border: 0px solid transparent;
@@ -58,62 +54,48 @@
 }
 
 // opinionated
-
-@mixin default-all {
-  box-sizing: border-box;
-  color: #132743;
-  font-family: 'Fira Sans';
-  font-smooth: always;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  letter-spacing: normal;
-  overflow-x: hidden;
-
-  html, body {
-    background-color: $background;
-    color: $paragraph;
-    height: 100%;
-    margin: 0;
-    scroll-behavior: smooth;
-    width: 100%;
-  }
-}
-
 @mixin default-anchor {
-  color: $objective;
+  color: colors.$objective;
   text-decoration: none;
   transition: all .5s ease-in-out;
 
   &:hover {
-    color: $subheader;
+    color: colors.$subheader;
   }
 }
 
-@mixin default-header {
-  margin: 0 0 10px;
+@mixin default-button {
+  flex: 1 1 0;
+
+  border-radius: 30px;
+  font-size: fonts.$font-size-4;
+  font-weight: 600;
+  min-width: 160px;
+  padding: 12px 18px;
+  position: relative;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
 }
 
 @mixin default-paragraph {
-  font-size: $font-size-4;
-  line-height: 1.5;
+  color: colors.$paragraph;
+  font-size: fonts.$font-size-5;
+  font-weight: 300;
+  line-height: 30px;
 }
 
 // applying
-* {
-  @include default-all;
-}
-
 a {
   @include default-anchor;
 }
 
 button {
   @include reset-button;
+  @include default-button;
 }
 
 h1, h2, h3, h4, h5, h6 {
   @include reset-header;
-  @include default-header;
 }
 
 p {

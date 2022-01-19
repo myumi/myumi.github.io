@@ -1,17 +1,91 @@
-// paddings & margins
-$spacing-1: 4px;
-$spacing-2: 8px;
-$spacing-3: 12px;
-$spacing-4: 16px;
-$spacing-5: 24px;
-$spacing-6: 32px;
-$spacing-7: 48px;
-$spacing-8: 64px;
-$spacing-9: 96px;
-$spacing-10: 128px;
-$spacing-11: 192px;
-$spacing-12: 256px;
-$spacing-13: 384px;
-$spacing-14: 512px;
-$spacing-15: 640px;
-$spacing-16: 768px;
+@use "breakpoints";
+
+$max-width: 1200px;
+
+$column-gap: 70px;
+$column-gutter: 20px;
+$column: $column-gap + $column-gutter;
+
+$row-gap: 10px;
+$row-gutter: 5px;
+$row: $row-gap + $row-gutter;
+
+$header-spacing: $row;
+$element-spacing: $row * 3;
+$section-spacing: $row * 7;
+
+$text-from-image-spacing: $column;
+
+@mixin main-spacing {
+  margin: ($row * 3) auto 0;
+  max-width: $max-width;
+  padding: 0 30px;
+
+  @include breakpoints.tablet-portrait {
+    padding: 0 40px;
+  }
+}
+
+@mixin footer-spacing {
+  padding: 20px 30px;
+
+  @include breakpoints.tablet-portrait {
+    padding: 30px 40px;
+  }
+}
+
+@mixin header-spacing {
+  margin: 0 0 $row-gap;
+
+  @include breakpoints.tablet-landscape {
+    margin: 0 0 $header-spacing;
+  }
+}
+
+// fira sans has extra padding on the font by default
+// so it needs slightly smaller margins to look right
+@mixin large-header-spacing {
+  margin: 0 0 ($row-gap - 5px);
+
+  @include breakpoints.tablet-landscape {
+    margin: 0 0 ($header-spacing - 5px);
+  }
+}
+
+@mixin paragraph-spacing {
+  &:not(:last-child) {
+    margin: 0 0 $row;
+  }
+}
+
+@mixin image-spacing {
+  margin: 0 0 ($row * 3);
+
+  @include breakpoints.tablet-landscape {
+    margin: 0 $text-from-image-spacing 0 0;
+  }
+}
+
+@mixin image-spacing-reverse {
+  margin: 0 0 ($row * 3);
+
+  @include breakpoints.tablet-landscape {
+    margin: 0 0 0 $text-from-image-spacing;
+  }
+}
+
+@mixin element-spacing {
+  margin: 0 0 ($row * 2);
+
+  @include breakpoints.tablet-landscape {
+    margin: 0 0 $element-spacing;
+  }
+}
+
+@mixin section-spacing {
+  margin: 0 0 $row * 5;
+
+  @include breakpoints.tablet-landscape {
+    margin: 0 0 $section-spacing;
+  }
+}

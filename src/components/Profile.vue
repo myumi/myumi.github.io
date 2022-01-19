@@ -5,11 +5,13 @@
         class="profile__image"
         src="../assets/me.png" 
         alt="A girl with pink hair, glasses, and a cat sitting while looking at a laptop"
-        title="Artwork by Paraplue Illustrations" 
+        title="Artwork by Paraplü Illustrations" 
       />
     </a>
 
     <div class="profile__info">
+      <!-- <Navigation /> -->
+
       <div class="profile__text">
         <h1 class="profile__text--h1"> 
           Hi, I’m
@@ -32,151 +34,144 @@
   </section>
 </template>
 
-<script>
-  export default {
-    data () {
-      return {
-        publicPath: process.env.BASE_URL,
-      }
-    }
+<!-- <script>
+import Navigation from './Navigation';
+
+export default {
+  name: 'Profile',
+  components: { 
+    Navigation, 
   }
-</script>
+}
+</script> -->
 
 <style lang="scss">
-  @import '../sass/main.scss';
+  @use "../sass/breakpoints";
+  @use "../sass/colors";
+  @use "../sass/fonts";
+  @use "../sass/spacing";
 
   #profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    margin: 20px auto 0;
-    min-height: 600px;
+    width: 100%;
 
-    @include tablet-portrait {
-      margin: 0 auto;
-      min-height: unset;
-
+    @include breakpoints.tablet-portrait {
       flex-direction: row-reverse;
       justify-content: space-between;
     }
 
-    @include desktop {
-      width: 1100px;
-    }
+    @include spacing.section-spacing;
   }
 
   .profile__image {
-    height: 300px;
-    max-width: 600px;
+    height: 320px;
+    margin: 0 0 (spacing.$row-gutter * 3);
 
-    @include tablet-portrait {
-      height: unset;
-      width: 400px;
+    @include breakpoints.tablet-portrait {
+      height: 390px;
+      margin: 0;
     }
 
-    @include tablet-landscape {
-      width: 500px;
+    @include breakpoints.tablet-landscape {
+      height: 500px;
+    }
+
+    @include breakpoints.desktop {
+      height: 565px;
     }
   }
 
   .profile__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
-    @include tablet-portrait {
-      padding-right: 20px;
-      max-width: 50%;
+    @include breakpoints.tablet-portrait {
+      flex: 1 1 0;
+      margin: 0 spacing.$column-gutter 0 0;
     }
-  }
-
-  .profile__text--h1, .profile__text--h2, .profile__text--h3 {
-    margin: 2px 0;
   }
 
   .profile__text--h1 {
-    font-size: 28px;
+    font-size: fonts.$font-size-8;
     font-weight: 600;
 
-    @include tablet-landscape {
-      font-size: 48px;
+    @include breakpoints.tablet-landscape {
+      font-size: fonts.$font-size-9;
     }
-  }
 
-  .profile__text--h1--highlight {
-    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, $highlight 50%);
-    border-radius: 2px;
-    padding: 0 3px;
+    .profile__text--h1--highlight {
+      background: linear-gradient(180deg, rgba(255,255,255,0) 50%, colors.$highlight 50%);
+      border-radius: 2px;
+      padding: 0 3px;
+    }
+
+    @include spacing.large-header-spacing;
   }
 
   .profile__text--h2 {
-    font-size: 22px;
+    font-size: fonts.$font-size-6;
     font-weight: 500;
 
-    @include tablet-landscape {
-      font-size: 36px;
+    @include breakpoints.tablet-landscape {
+      font-size: fonts.$font-size-8;
+      max-width: 520px;
     }
+
+    @include spacing.header-spacing;
   }
 
   .profile__text--h3 {
-    font-size: 16px;
+    font-size: fonts.$font-size-3;
     font-weight: 400;
-    margin: 8px 0 2px;
 
-    @include tablet-landscape {
-      font-size: 18px;
-      margin: 10px 0 2px;
+    @include breakpoints.tablet-landscape {
+      font-size: fonts.$font-size-3;
     }
+
+    @include spacing.element-spacing;
   }
 
   .profile__paragraph {
-    color: $paragraph;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1.5;
-    margin: 5px 0;
-
-    @include respond-to-height(700px) {
-      margin: 15px 0;
-      font-size: 20px;
+    @include breakpoints.tablet-landscape {
+      max-width: 450px;
     }
+
+    @include spacing.element-spacing;
   }
 
   .profile__buttons {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 
-    @include desktop {
-      display: unset;
+    @include breakpoints.tablet-portrait {
+      justify-content: unset;
     }
   }
 
-  .profile__button--filled, .profile__button--outline {
-    border-radius: 20px;
-    flex: 1 1 0;
-    font-weight: 600;
-    padding: 12px 15px;
-    width: 150px;
-    position: relative;
-    overflow: hidden;
-    transition: all .5s ease-in-out;
-  }
-
   .profile__button--filled {
-    background: $objective;
-    color: #fefefe;
-    margin: 0 10px 0 0;
+    background: colors.$objective;
+    color: #FEFEFE;
 
     &:hover {
-      background: darken($objective, 8%);
-      color: #fff;
+      background: darken(colors.$objective, 8%);
+      color: #FFFFFF;
+    }
+
+    @include breakpoints.tablet-portrait {
+      margin: 0 15px 0 0;
+    }
+
+    @include breakpoints.tablet-landscape {
+      min-width: 180px;
     }
   }
 
   .profile__button--outline {
-    color: $objective;
-    border: 2px solid $highlight;
+    color: colors.$objective;
+    border: 2px solid colors.$highlight;
     z-index: 1;
 
     &:before {
@@ -187,19 +182,23 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: $highlight;
+      background-color: colors.$highlight;
       transform: translateX(-100%);
-      transition: all .5s ease-in-out;
+      transition: all .6s ease-in-out;
     }
 
     &:hover {
-      color: #fff;
+      color: #FFFFFF;
       border-color: transparent;
 
       &:before {
-        background: darken($objective, 8%);
+        background: darken(colors.$objective, 8%);
         transform: translateX(0%);
       }
+    }
+
+    @include breakpoints.tablet-landscape {
+      min-width: 180px;
     }
   }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <section id="about">
-    <h1 class="about__h1 about__h1--highlight">About me</h1>
+    <h1 class="about__h1">
+      <span class="about__h1--highlight">About me</span>
+    </h1>
     <div class="about__content">
       <img class="about__image" src="https://images.unsplash.com/photo-1534179523731-b2922018150a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" alt='Photo of Mayumi' />
       <div class="about__info">
@@ -30,31 +32,27 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../sass/main.scss';
+  @use "../sass/breakpoints";
+  @use "../sass/colors";
+  @use "../sass/fonts";
+  @use "../sass/spacing";
 
   #about {
-    flex-direction: column;
-    margin: 40px auto;
-
-    @include desktop {
-      width: 1100px;
-    }
+    @include spacing.section-spacing;
   }
 
   .about__h1 {
-    display: inline-block;
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0 0 25px;
+    font-size: fonts.$font-size-8;
 
-    @include tablet-landscape {
-      font-size: 48px;
-      margin: 0 0 15px;
+    @include breakpoints.tablet-landscape {
+      font-size: fonts.$font-size-9;
     }
+
+    @include spacing.element-spacing;
   }
 
   .about__h1--highlight {
-    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, $highlight 50%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, colors.$highlight 50%);
     border-radius: 2px;
     padding: 0 3px;
   }
@@ -62,35 +60,35 @@
   .about__content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
 
-    @include tablet-landscape {
+    @include breakpoints.tablet-landscape {
       flex-direction: row-reverse;
+      align-items: unset;
     }
   }
 
   .about__image {
     border-radius: 10px;
-    height: 450px;
+    max-width: 100%;
 
-    @include tablet-landscape {
-      align-self: stretch;
-      height: unset;
-      width: 500px;
+    @include breakpoints.tablet-portrait {
+      width: 350px;
     }
+
+    @include breakpoints.tablet-landscape {
+      width: 550px;
+    }
+
+    @include spacing.image-spacing-reverse;
   }
 
   .about__info {
-    align-self: stretch;
-
     p {
-      margin: 8px 0;
-      line-height: 1.6 !important;
+      @include spacing.paragraph-spacing;
     }
-
-    @include tablet-landscape {
+    @include breakpoints.tablet-landscape {
       width: 500px;
     }
   }
-
 </style>

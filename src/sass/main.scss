@@ -1,24 +1,24 @@
-@import './breakpoints.scss';
-@import './colors.scss';
-@import './defaults.scss';
-
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@use "colors";
+@use "spacing";
+@use "fonts";
+@use "defaults";
 
 * {
-  font-family: 'Fira Sans';
+  box-sizing: border-box;
+  font-family: "Fira Sans";
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: normal;
+  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 html, body {
-  background-color: $background;
-  color: $paragraph;
-  font-size: 16px;
+  background-color: colors.$background;
+  color: colors.$paragraph;
+  font-size: fonts.$font-size-5;
   height: 100%;
-  margin: 0;
-  scroll-behavior: smooth;
+  margin: 0 auto;
   width: 100%;
 }
