@@ -1,7 +1,9 @@
 <template>
   <section id="work">
     <div class="work__headers">
-      <h1 class="headers__h1 headers__h1--highlight">Work</h1>
+      <h1 class="headers__h1">
+        <span class="headers__h1--highlight">Work</span>
+      </h1>
       <h2 class="headers__h2">These are some projects I've left my mark on.</h2>
     </div>
     <div class="work--projects">
@@ -15,6 +17,7 @@
         :tools="project.tools"
         :description="project.description"
         :recognitions="project.recognitions"
+        :url="project.url"
         :github="project.github"
       />
     </div>
@@ -58,20 +61,21 @@ export default {
               names: ['the Joe Biden Campaign', 'and more'],
             },
           ],
+          url: 'https://acpatterns.com',
           github: 'https://github.com/Thulinma/ACNLPatternTool',
         },
         {
           image: 'https://images.unsplash.com/photo-1519750783826-e2420f4d687f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGJva2VofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-          imageAlt: `A snapshot of a website that emulates the pattern-making tool 
-            in the Nintendo Switch game Animal Crossing: New Horizions`,
+          imageAlt: `A fanmade tool for the web-based game Flight Rising`,
           label: 'Web App and Design',
           title: 'Guardian',
-          tools: ['React', 'TypeScript', 'Google Cloud Platform', 'SCSS', 'Figma'],
+          tools: ['React', 'Redux', 'TypeScript', 'Google Cloud Platform', 'SCSS', 'Figma'],
           description: `<p>I like niche things. If a subculture exists, I am probably going to fall into it. One of those things is pet sims.</p>
           <p>I started playing Flight Rising back in college, but as the 2019-2X COVID pandemic kicked in, I needed something to distract myself with. 
           I started playng Flight Rising again with a group of friends and found a few gaps in supporting tools for the game. Although various sites, Google sheets, 
           and forum posts existed as guides, there was no central hub that had it all.</p>
           <p>I made Guardian, named after a popular dragon breed on the site, to satisfy the helper tools I found myself needing while I played.</p>`,
+          url: 'https://guardian.mayumi.dev',
           github: 'https://github.com/myumi/guardian',
         },
         {
@@ -106,48 +110,47 @@ export default {
 </script>
 
 <style lang="scss">
-  @import '../sass/main.scss';
+  // @import '../sass/main.scss';
+  @use "../sass/breakpoints";
+  @use "../sass/colors";
+  @use "../sass/fonts";
+  @use "../sass/spacing";
 
   #work {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    width: 100%;
 
-    margin: 40px auto ;
-    min-height: 600px;
-
-    @include desktop {
-      width: 1100px;
-    }
+    @include spacing.section-spacing;
   }
 
   .work__headers {
-    margin: 0 0 15px;
-    width: 100%;
+    @include spacing.element-spacing;
   }
 
   .headers__h1 {
-    display: inline;
-    font-size: 28px;
+    font-size: fonts.$font-size-8;
     font-weight: 600;
+    margin: 0 0 spacing.$row-gutter;
 
-    @include tablet-landscape {
-      font-size: 48px;
+    @include breakpoints.tablet-landscape {
+      font-size: fonts.$font-size-9;
+      margin: 0 0 spacing.$row-gap;
     }
   }
 
   .headers__h1--highlight {
-    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, $highlight 50%);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 50%, colors.$highlight 50%);
     border-radius: 2px;
     padding: 0 3px;
   }
 
   .headers__h2 {
-    font-size: 22px;
+    font-size: fonts.$font-size-6;
     font-weight: 500;
 
-    @include tablet-landscape {
-      font-size: 24px;
+    @include breakpoints.tablet-landscape {
+      font-size: fonts.$font-size-7;
     }
   }
 </style>

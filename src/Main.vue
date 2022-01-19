@@ -1,53 +1,45 @@
 <template>
   <main>
     <div class="main__content">
-      <Navigation />
+      <!-- <Navigation /> -->
       <Profile />
       <Work />
       <About />
     </div>
-    <!-- <Contact /> -->
     <Footer />
   </main>
 </template>
 
 <script>
-import Navigation from './components/Navigation.vue'
-import Profile from './components/Profile.vue'
-import Work from './components/Work.vue'
+// import Navigation from './components/Navigation.vue'
+import Profile from './components/Profile'
+import Work from './components/Work'
 import About from './components/About.vue'
-import Footer from './components/Footer.vue'
+import Footer from './components/Footer'
 
 export default {
   name: 'Portfolio',
   components: { 
-    Navigation, 
+    // Navigation, 
     Profile, 
     Work, 
     About, 
-    Footer 
+    Footer,
   }
 }
 </script>
 
 <style lang="scss">
-  @import './sass/main.scss';
-  @import './sass/defaults.scss';
+  @use "./sass/main";
+  @use "./sass/spacing";
 
   main {
     display: flex;
     flex-direction: column;
-
-    height: 100%;
   }
 
   .main__content {
-    padding: 0 25px;
-    max-width: 1200px;
-    margin: 0 auto;
-
-    @include tablet-portrait {
-      padding: 0 40px;
-    }
+    @include spacing.main-spacing;
+    width: 100%;
   }
 </style>
