@@ -88,7 +88,7 @@
       @include spacing.paragraph-spacing;
     }
     @include breakpoints.tablet-landscape {
-      width: 500px;
+      flex: 1 1 0;
     }
   }
 </style>

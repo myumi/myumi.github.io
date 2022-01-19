@@ -98,10 +98,10 @@ export default {
           title: 'Vibrant Emotional Health',
           tools: ['React', 'Gatsby', 'Vue', 'Cypress', 'SCSS', 'Figma'],
           description: `
-            <p>Working with Vibrant was an interesting experience, as the development team was small and we had a lot of freedom in the tools we used to to work. I was able to contribute, if not completely develop and design, products that had a very large user base.</p>
+            <p>Working with Vibrant was an interesting experience, as the development team was small and we had a lot of freedom in the tools we used. I was able to contribute, occasionally completely develop and design, products that had a very large user base.</p>
             <p>I developed the new web-based chat platform for the National Suicide Hotline, integrating a contracted third-party chat service.</p>
             <p>I designed the interface for a new system in Figma and built it out in Vue, React, and Gatsby.</p>
-            <p>Working closely with experts in the mental health field, I was often the communication between the tech department and stakeholders, making sure both felt heard and understood.</p>`,
+            <p>I worked closely with experts in the mental health field and I was often the communication between the tech department and stakeholders, making sure both felt heard and understood.</p>`,
         },
       ]
     }
@@ -110,7 +110,6 @@ export default {
 </script>
 
 <style lang="scss">
-  // @import '../sass/main.scss';
   @use "../sass/breakpoints";
   @use "../sass/colors";
   @use "../sass/fonts";

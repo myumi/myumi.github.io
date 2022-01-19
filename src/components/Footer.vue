@@ -27,7 +27,6 @@ export default {
   footer {
     background-color: colors.$highlight;
     min-height: 100px;
-    width: 100%;
 
     @include spacing.footer-spacing;
   }
@@ -36,7 +35,7 @@ export default {
 
     @include breakpoints.desktop {
       margin: 0 auto;
-      max-width: 1100px;
+      max-width: spacing.$max-width;
     }
   }
 

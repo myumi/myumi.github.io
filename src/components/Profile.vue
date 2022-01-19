@@ -20,7 +20,7 @@
         <h2 class="profile__text--h2">I’m a web developer and designer based anywhere.</h2>
         <h3 class="profile__text--h3">(That means I like to work remotely.)</h3>
         <p class="profile__paragraph">
-          I'm currently redesigning this site and updating it with my most recent projects.
+          I'm currently redesigning this site and updating it with my most recent projects and artwork.
           If you'd like to work on something together,
           please get in touch with me <a href="mailto:me@mayumi.dev">via email</a>.
         </p>
